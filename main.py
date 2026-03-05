@@ -38,7 +38,12 @@ client = genai.Client(api_key=gemini_api_key)
 # 新版 Configuration (用於呼叫 LINE Message API)
 configuration = Configuration(access_token=channel_access_token)
 
-@app.route("/callback", methods=['POST'])
+# 這是為了應付 UptimeRobot 打卡用的通道
+@app.route("/", methods=['GET'])
+def home():
+    return "Hello! The bot is awake and ready."
+    
+    @app.route("/callback", methods=['POST'])
 def callback():
     # 取得 X-Line-Signature 標頭值來驗證來源
     signature = request.headers['X-Line-Signature']
