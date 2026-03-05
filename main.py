@@ -39,7 +39,7 @@ client = genai.Client(api_key=gemini_api_key)
 configuration = Configuration(access_token=channel_access_token)
 
 # 這是為了應付 UptimeRobot 打卡用的通道
-@app.route("/", methods=['GET'])
+    @app.route("/", methods=['GET'])
 def home():
     return "Hello! The bot is awake and ready."
     
