@@ -75,10 +75,10 @@ def handle_message(event):
             f"以下是需要翻譯的文字：\n{user_text}"
         )
         
-        # 呼叫 Gemini 2.5 Flash 模型
+         # 換成免費額度高達 1,500 次的輕量級引擎！
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
-            contents=prompt
+            model="gemini-1.5-flash-8b", 
+            contents=prompt  
         )
         # 用 .strip() 去除頭尾可能自動產生的多餘空白或換行
         reply_text = response.text.strip()
