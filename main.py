@@ -77,7 +77,7 @@ def handle_message(event):
         
          # 換成免費額度高達 1,500 次的輕量級引擎！
         response = client.models.generate_content(
-            model="gemini-1.5-flash-8b", 
+            model="gemini-1.5-flash", 
             contents=prompt  
         )
         # 用 .strip() 去除頭尾可能自動產生的多餘空白或換行
